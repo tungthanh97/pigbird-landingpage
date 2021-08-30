@@ -1,0 +1,234 @@
+@font-face {
+  font-family: lulo-clean-bold;
+  src: url(../assets/fonts/lulo-clean-bold.otf);
+}
+
+@font-face {
+  font-family: futura;
+  src: url(../assets/fonts/futura-light.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/******* Container ******/
+html {
+  font-family: futura, serif;
+  font-size: 62.5%;
+}
+
+body {
+  color: #000;
+  background-color: white;
+  font-weight: 400;
+  line-height: 3rem;
+  box-sizing: border-box;
+  margin: auto;
+}
+/* layout */
+header {
+  text-align: center;
+  height: 30vh;
+  font-size: 2.1rem;
+}
+
+.header_logo-box {
+  display: flex;
+  height: 16 rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+  width: 90rem;
+  margin: auto;
+}
+
+footer {
+  background-color: #002e5d;
+  height: 30vh;
+  font-size: 2rem;
+  color: white;
+  padding: 3rem 0 3rem 1rem;
+}
+/* Overview */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__content-image {
+  flex: 0 0 50%;
+  margin: 2rem;
+}
+
+.banner__content-box {
+  display: flex;
+  margin: 1rem 0 1rem 0;
+}
+
+.banner__content-box--sub {
+  display: flex;
+  margin: 1rem 0 1rem 0;
+  align-items: center;
+}
+/* team-member */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.founder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 3rem 2rem 3rem 2rem;
+}
+
+.avatar-box {
+  flex: 0 0 30%;
+  margin: 1rem 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.founder_description {
+  flex: 0 0 70%;
+  font-size: 2.1rem;
+  margin: 2rem;
+}
+
+.department-members {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.achievement {
+  font-size: 2.1rem;
+  padding: 2rem 0 2rem 8rem;
+}
+
+.footer-box {
+  width: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.footer__team-name {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: futura;
+  flex: 0 0 50%;
+  line-height: 5rem;
+}
+
+.footer__team-info {
+  flex: 0 0 50%;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+}
+/********* Element ********/
+
+.heading-main {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: lulo-clean-bold;
+  padding: 1rem 1rem 0 2rem;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-sub {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-moveInLeft {
+  animation: moveInLeft 1s ease-out;
+}
+
+.text-moveInRight {
+  animation: moveInRight 1s ease-out;
+}
+/* Overview */
+.header_logo-image {
+  height: 12rem;
+}
+
+.header_logo-name {
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.banner__content {
+  flex: 0 0 50%;
+  font-size: 2.1rem;
+  margin: 2rem;
+}
+/* team-member */
+.avatar__image {
+  height: 10rem;
+  margin: 0 0 2rem 0;
+}
+
+.avatar__caption-name {
+  font-size: 3rem;
+  font-family: futura;
+  font-weight: normal;
+  margin: 2rem 0 1rem 0;
+}
+
+.avatar__caption-role {
+  font-size: 2rem;
+  font-family: futura;
+  font-weight: normal;
+}
+
+.department-name {
+  font-family: lulo-clean-bold;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 1rem 0 2rem;
+}
+
+.achievement__heading {
+  font-family: 'Lucida Sans', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
