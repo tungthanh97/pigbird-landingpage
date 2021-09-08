@@ -1,19 +1,10 @@
 'use strict';
 
-var win = $(window);
-function addAnimation(element, animation) {
-  const allElements = $(element);
-  win.scroll(function (event) {
-    allElements.each(function (i, el) {
-      var element = $(el);
-      if (element.visible(true)) {
-        element.addClass(animation);
-      }
-    });
+$(window).scroll(function () {
+  var scrollTop = $(window).scrollTop();
+  const height = $(window).height();
+  const offset = height / 3;
+  $('.header__image').css({
+    opacity: 1 - (scrollTop - offset) / (height - offset),
   });
-}
-
-// addAnimation('.moveInRight', 'text-moveInRight');
-// addAnimation('.moveInLeft', 'text-moveInLeft');
-// addAnimation('.avatar-box', 'fadeIn');
-// addAnimation('img', 'fadeIn');
+});

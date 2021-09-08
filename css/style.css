@@ -107,14 +107,30 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-.feature__box-main {
+.feature__box--big {
   position: relative;
   height: 50rem;
   width: 100rem;
   overflow: hidden;
   backface-visibility: hidden;
-  margin: 5rem 0 5rem 0;
+  margin: 2rem 0 2rem 0;
   border-radius: 2rem;
+}
+
+.feature__intro {
+  text-align: center;
+  line-height: 6rem;
+  margin: 10rem;
+}
+.feature__intro-main {
+  font-size: 6rem;
+}
+.feature__intro-sub {
+  font-size: 2.6rem;
+  color: #75808a;
+}
+.feature__intro-description {
+  font-size: 2rem;
 }
 
 .feature__description {
@@ -156,25 +172,86 @@ footer {
   color: white;
   font-size: 2.2rem;
   padding: 1rem 2rem;
+  border-radius: 2rem;
 }
 .feature__image:hover ~ .feature__button {
   background-color: blue;
+}
+/* feature__details */
+.feature__box--small {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60rem;
+  width: 100rem;
+}
+.feature__box-left {
+  flex: 1;
+  width: 55rem;
+  height: 60rem;
+  position: relative;
+  border-radius: 2rem;
+  margin-right: 2rem;
+  overflow: hidden;
+}
+.feature__box--right {
+  flex: 1;
+  position: relative;
+  width: 40rem;
+  height: 60rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.feature__image--small {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  object-fit: cover;
+  object-position: bottom;
+}
+.feature__image--small:hover {
+  transform: scale(1.08);
+}
+.feature__description--small {
+  font-family: 'Segoe UI';
+  color: #000;
+  position: absolute;
+  top: 0;
+  padding: 4rem;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.feature__button--blue {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  color: blue;
+  font-size: 2.2rem;
+  padding: 1rem 2rem;
   border-radius: 2rem;
 }
-.feature__intro {
-  text-align: center;
-  line-height: 6rem;
+.feature__button--black {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.8rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1rem;
 }
-.feature__intro-main {
-  font-size: 6rem;
+.feature__image--small:hover ~ .feature__button--blue {
+  background-color: blue;
+  color: white;
 }
-.feature__intro-sub {
-  font-size: 2rem;
-  color: #f1f3f4;
-}
-.feature__intro-description {
-  font-size: 2rem;
-}
+
 /* End Feature */
 /* Footer */
 .footer-box {
